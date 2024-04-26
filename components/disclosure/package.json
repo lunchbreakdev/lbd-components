@@ -1,0 +1,39 @@
+{
+  "name": "@lunchbreakdev/lbd-disclosure",
+  "version": "1.0.0",
+  "description": "A web component for creating an accessible disclosure",
+  "main": "lbd-disclosure.min.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "build": "npx esbuild lbd-disclosure.js --bundle --minify --outfile=lbd-disclosure.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/disclosure"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "disclosure"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lbd-disclosure.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/disclosure#readme"
+}

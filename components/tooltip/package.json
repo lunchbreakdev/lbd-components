@@ -1,0 +1,39 @@
+{
+  "name": "@lunchbreakdev/lbd-tooltip",
+  "version": "1.0.0",
+  "description": "A web component for creating an accessible tooltip",
+  "main": "lbd-tooltip.min.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "build": "npx esbuild lbd-tooltip.js --bundle --minify --outfile=lbd-tooltip.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/tooltip"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "tooltip"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lbd-tooltip.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/tooltip#readme"
+}

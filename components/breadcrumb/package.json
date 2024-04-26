@@ -1,0 +1,39 @@
+{
+  "name": "@lunchbreakdev/lbd-breadcrumb",
+  "version": "1.0.0",
+  "description": "A web component for creating an accessible breadcrumb",
+  "main": "lbd-breadcrumb.min.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "build": "npx esbuild lbd-breadcrumb.js --bundle --minify --outfile=lbd-breadcrumb.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/breadcrumb"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "breadcrumb"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lbd-breadcrumb.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/breadcrumb#readme"
+}

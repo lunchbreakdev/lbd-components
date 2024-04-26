@@ -1,0 +1,39 @@
+{
+  "name": "@lunchbreakdev/lbd-tabs",
+  "version": "1.0.0",
+  "description": "A web component for creating an accessible tabs",
+  "main": "lbd-tabs.min.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "build": "npx esbuild lbd-tabs.js --bundle --minify --outfile=lbd-tabs.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/tabs"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "tabs"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lbd-tabs.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/tabs#readme"
+}
