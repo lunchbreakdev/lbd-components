@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "lunchbreakdev/lbd-components" }
+  ],
+  "commit": false,
+  "fixed": [],
+  "linked": [["@lunchbreakdev/components", "@lunchbreakdev/lbd-*"]],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}

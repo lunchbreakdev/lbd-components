@@ -1,0 +1,39 @@
+{
+  "name": "@lunchbreakdev/lbd-{%template%}",
+  "version": "1.0.0",
+  "description": "A web component for creating an accessible {%template%}",
+  "main": "lbd-{%template%}.min.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "build": "npx esbuild lbd-{%template%}.js --bundle --minify --outfile=lbd-{%template%}.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/{%template%}"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "{%template%}"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lbd-{%template%}.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/{%template%}#readme"
+}
