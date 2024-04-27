@@ -1,7 +1,7 @@
 import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdDisclosure extends HTMLElement {
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-disclosure', LbdDisclosure);
     }
@@ -34,7 +34,7 @@ class LbdDisclosure extends HTMLElement {
 
   _observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      const isOpen = mutation.target.getAttribute('open') !== null
+      const isOpen = (mutation.target as HTMLElement).getAttribute('open') !== null
       this.summaryEl?.setAttribute('aria-expanded', String(isOpen))
     })
   })

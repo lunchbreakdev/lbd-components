@@ -43,7 +43,7 @@ execSync(
 )
 
 fs.appendFileSync(
-  path.resolve('packages/components/lbd-components.js'),
+  path.resolve('packages/components/lbd-components.ts'),
   `export * from '@lunchbreakdev/lbd-${newComponentName}'\n`,
 )
 

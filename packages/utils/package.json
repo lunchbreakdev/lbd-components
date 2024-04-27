@@ -2,10 +2,14 @@
   "name": "@lunchbreakdev/web-component-utils",
   "version": "0.0.0",
   "description": "A set of common utilities for building accessible web components",
-  "main": "web-component-utils.min.js",
+  "main": "./dist/web-component-utils.min.js",
+  "types": "./dist/web-component-utils.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npx esbuild web-component-utils.js --bundle --minify --format=esm --outfile=web-component-utils.min.js"
+    "build": "tsc && npx esbuild web-component-utils.ts --bundle --minify --format=esm --outfile=dist/web-component-utils.min.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   },
   "repository": {
     "type": "git",
@@ -25,7 +29,7 @@
     "access": "public"
   },
   "files": [
-    "web-component-utils.min.js"
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

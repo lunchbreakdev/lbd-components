@@ -9,7 +9,7 @@ A Web Component for creating an accessible tooltip
 General usage example:
 
 ```html
-<script type="module" src="lbd-tooltip.js"></script>
+<script type="module" src="lbd-tooltip.min.js"></script>
 
 <lbd-tooltip>
 

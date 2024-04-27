@@ -281,6 +281,8 @@ __metadata:
 "@lunchbreakdev/lbd-breadcrumb@npm:0.0.0, @lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb"
+  dependencies:
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -293,6 +295,7 @@ __metadata:
     "@lunchbreakdev/lbd-tabs": "npm:0.0.0"
     "@lunchbreakdev/lbd-tooltip": "npm:0.0.0"
     "@lunchbreakdev/lbd-treeview": "npm:0.0.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -301,6 +304,7 @@ __metadata:
   resolution: "@lunchbreakdev/lbd-disclosure@workspace:components/disclosure"
   dependencies:
     "@lunchbreakdev/web-component-utils": "npm:0.0.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -309,6 +313,7 @@ __metadata:
   resolution: "@lunchbreakdev/lbd-tabs@workspace:components/tabs"
   dependencies:
     "@lunchbreakdev/web-component-utils": "npm:0.0.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -317,6 +322,7 @@ __metadata:
   resolution: "@lunchbreakdev/lbd-tooltip@workspace:components/tooltip"
   dependencies:
     "@lunchbreakdev/web-component-utils": "npm:0.0.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -325,12 +331,15 @@ __metadata:
   resolution: "@lunchbreakdev/lbd-treeview@workspace:components/treeview"
   dependencies:
     "@lunchbreakdev/web-component-utils": "npm:0.0.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
 "@lunchbreakdev/web-component-utils@npm:0.0.0, @lunchbreakdev/web-component-utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/web-component-utils@workspace:packages/utils"
+  dependencies:
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -2055,6 +2064,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@changesets/cli": "npm:^2.27.1"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -2482,6 +2492,26 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/74253d7dc488eb28b6b2711cf31f5a9dcefc9c41b0681fd1c178ed0a1681b4468581a3626d39cd4df7aee3d3927ab62be06aa9ca74e5baf81827f61641445b77
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^5.4.5":
+  version: 5.4.5
+  resolution: "typescript@npm:5.4.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
+  version: 5.4.5
+  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/db2ad2a16ca829f50427eeb1da155e7a45e598eec7b086d8b4e8ba44e5a235f758e606d681c66992230d3fc3b8995865e5fd0b22a2c95486d0b3200f83072ec9
   languageName: node
   linkType: hard
 

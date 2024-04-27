@@ -1,7 +1,7 @@
 import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTooltip extends HTMLElement {
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-tooltip', LbdTooltip);
     }
@@ -50,7 +50,7 @@ class LbdTooltip extends HTMLElement {
     this.trigger.removeAttribute('data-tooltip-title')
   }
 
-  handleKeydown = (event) => {
+  handleKeydown = (event: KeyboardEvent) => {
     const keys = ['Escape']
 
     if (!keys.includes(event.key)) return
@@ -70,11 +70,11 @@ class LbdTooltip extends HTMLElement {
     document.removeEventListener('keydown', this.handleKeydown)
   }
 
-  get trigger() {
+  get trigger(): HTMLElement | null {
     return this.querySelector('[title]') || this.querySelector('[data-tooltip-trigger]')
   }
 
-  get tooltip() {
+  get tooltip(): HTMLElement {
     return this.shadowRoot.querySelector('[role="tooltip"]')
   }
 }

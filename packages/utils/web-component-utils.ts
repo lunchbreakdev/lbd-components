@@ -1,4 +1,4 @@
 export const uniqueId = (
-  (counter) => (str) =>
+  (counter) => (str?: string) =>
     `:${str}${++counter}:`
 )(0)

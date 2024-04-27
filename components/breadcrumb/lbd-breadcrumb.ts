@@ -1,5 +1,5 @@
 class LbdBreadcrumb extends HTMLElement {
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-breadcrumb', LbdBreadcrumb);
     }
@@ -17,17 +17,17 @@ class LbdBreadcrumb extends HTMLElement {
       this.navEl.setAttribute('aria-label', 'Breadcrumb')
     }
 
-    this.linkEls[this.linkEls.length - 1]?.setAttribute(
+    this.linkEls[this.linkEls.length - 1].setAttribute(
       'aria-current',
       'page',
     )
   }
 
-  get navEl() {
+  get navEl(): HTMLElement {
     return this.querySelector('nav') || this
   }
 
-  get linkEls() {
+  get linkEls(): HTMLAnchorElement[] {
     const listEl = this.navEl.querySelector('ol')
     if (!listEl) return []
     return Array.from(listEl.querySelectorAll('a'))

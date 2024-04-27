@@ -5,7 +5,7 @@ class LbdTabs extends HTMLElement {
     vertical: 'vertical'
   }
 
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-tabs', LbdTabs);
     }
@@ -24,10 +24,10 @@ class LbdTabs extends HTMLElement {
 
     this.linkEls.forEach((tab, i) => {
       const id = tab.id || uniqueId('lbd-tab')
-      const panelId = tab.getAttribute('href').slice(1)
-      const panel = document.getElementById(panelId)
+      const panelId = tab.getAttribute('href')?.slice(1)
+      const panel = panelId ? document.getElementById(panelId) : null
 
-      if (!panel) return
+      if (!panel || !panelId) return
 
       tab.id = id
       tab.setAttribute('role', 'tab')
@@ -48,25 +48,25 @@ class LbdTabs extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.listEl.removeEventListener('keydown', this.handleKeydown)
+    this.listEl?.removeEventListener('keydown', this.handleKeydown)
 
     this.linkEls.forEach((tab) =>
       tab.removeEventListener('click', this.handleClick),
     )
   }
 
-  setNewTab = (el) => {
-    const panelId = el.getAttribute('href').slice(1)
-    const panel = document.getElementById(panelId)
+  setNewTab = (el: HTMLElement) => {
+    const panelId = el.getAttribute('href')?.slice(1)
+    const panel = panelId ? document.getElementById(panelId) : null
 
     el.setAttribute('aria-selected', 'true')
     el.removeAttribute('tabindex')
     el.focus()
 
-    panel.removeAttribute('hidden')
+    panel?.removeAttribute('hidden')
   }
 
-  handleKeydown = (event) => {
+  handleKeydown = (event: KeyboardEvent) => {
     const keys = ['Home', 'End']
 
     if (this.vertical) {
@@ -81,9 +81,9 @@ class LbdTabs extends HTMLElement {
     const firstTab = this.linkEls[0]
     const lastTab = this.linkEls[this.linkEls.length - 1]
 
-    this.currentTab.setAttribute('tabindex', '-1')
-    this.currentPanel.setAttribute('hidden', '')
-    this.currentTab.setAttribute('aria-selected', 'false')
+    this.currentTab?.setAttribute('tabindex', '-1')
+    this.currentPanel?.setAttribute('hidden', '')
+    this.currentTab?.setAttribute('aria-selected', 'false')
 
     switch (event.key) {
       case 'ArrowLeft':
@@ -131,39 +131,43 @@ class LbdTabs extends HTMLElement {
     }
   }
 
-  handleClick = (event) => {
+  handleClick = (event: MouseEvent) => {
     event.preventDefault()
 
     if (this.currentTab === event.target) return
 
-    this.currentTab.setAttribute('aria-selected', 'false')
-    this.currentTab.setAttribute('tabindex', '-1')
-    this.currentPanel.setAttribute('hidden', '')
+    this.currentTab?.setAttribute('aria-selected', 'false')
+    this.currentTab?.setAttribute('tabindex', '-1')
+    this.currentPanel?.setAttribute('hidden', '')
 
-    this.setNewTab(event.target)
+    this.setNewTab(event.target as HTMLElement)
   }
 
-  get listEl() {
+  get listEl(): HTMLOListElement | null {
     return this.querySelector('ol')
   }
 
-  get linkEls() {
+  get linkEls(): HTMLAnchorElement[] {
     if (!this.listEl) return []
     return Array.from(this.listEl.querySelectorAll('a[href^="#"]'))
   }
 
-  get vertical() {
+  get vertical(): boolean {
     return this.hasAttribute(LbdTabs.attrs.vertical)
   }
 
-  get currentTab() {
-    return this.listEl.querySelector(
+  get currentTab(): HTMLAnchorElement | null | undefined {
+    return this.listEl?.querySelector(
       'a[href^="#"][aria-selected="true"]',
     )
   }
 
-  get currentPanel() {
-    return document.getElementById(this.currentTab.getAttribute('href').slice(1))
+  get currentPanel(): HTMLElement | null {
+    const panelId = this.currentTab?.getAttribute('href')?.slice(1)
+
+    if (!panelId) return null
+
+    return document.getElementById(panelId)
   }
 }
 

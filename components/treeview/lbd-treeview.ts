@@ -1,7 +1,7 @@
 import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTreeview extends HTMLElement {
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-treeview', LbdTreeview);
     }
@@ -10,7 +10,7 @@ class LbdTreeview extends HTMLElement {
   connectedCallback() {
     if (!this.listEl) return
 
-    const addListAttributes = (el, level) => {
+    const addListAttributes = (el: HTMLElement, level: number) => {
       const items = Array.from(
         el.querySelectorAll(
           this.listItemSelectors
@@ -35,7 +35,7 @@ class LbdTreeview extends HTMLElement {
 
         const subList = item.querySelector(
           this.listSelectors.map((s) => `:scope > ${s}`).join(','),
-        )
+        ) as HTMLElement | null
 
         if (!subList) continue
 
@@ -48,7 +48,7 @@ class LbdTreeview extends HTMLElement {
       }
     }
 
-    const prevEl = this.listEl.previousElementSibling
+    const prevEl = this.listEl.previousElementSibling as HTMLElement
 
     const treeId = this.listEl.id || uniqueId('lbd-treeview-')
 
@@ -83,8 +83,8 @@ class LbdTreeview extends HTMLElement {
     }
   }
 
-  toggleSubList = (e) => {
-    const el = e.target
+  toggleSubList = (e: MouseEvent) => {
+    const el = e.target as HTMLElement
 
     if (!el) return
 
@@ -121,8 +121,8 @@ class LbdTreeview extends HTMLElement {
     el.setAttribute('aria-selected', 'true')
   }
 
-  handleKeydown = (e) => {
-    const el = e.target
+  handleKeydown = (e: KeyboardEvent) => {
+    const el = e.target as HTMLElement
 
     if (!el) return
 
@@ -164,7 +164,7 @@ class LbdTreeview extends HTMLElement {
           ])
           .join(','),
       ),
-    )
+    ) as HTMLElement[]
 
     const elIndex = availableListItems.indexOf(el)
 
@@ -226,7 +226,7 @@ class LbdTreeview extends HTMLElement {
           el.querySelector(':scope > ul')?.removeAttribute('hidden')
           el.setAttribute('aria-expanded', 'true')
         } else {
-          el.querySelector(':scope > ul > li')?.focus()
+          (el.querySelector(':scope > ul > li') as HTMLElement)?.focus()
         }
         break
 
@@ -266,8 +266,8 @@ class LbdTreeview extends HTMLElement {
     }
   }
 
-  handleFocus = (e) => {
-    const el = e.target
+  handleFocus = (e: FocusEvent) => {
+    const el = e.target as HTMLElement
 
     if (!el) return
 
@@ -275,7 +275,7 @@ class LbdTreeview extends HTMLElement {
 
     if (!rootListEl) return
 
-    const listItems = Array.from(rootListEl.querySelectorAll('li'))
+    const listItems = Array.from(rootListEl.querySelectorAll('li')) as HTMLElement[]
 
     for (const item of listItems) {
       if (item === el || item.getAttribute('tabindex') === '-1') continue
@@ -300,7 +300,7 @@ class LbdTreeview extends HTMLElement {
 
   listItemSelectors = ['li', '[role="listitem"]']
 
-  get headingEls() {
+  get headingEls(): HTMLElement[] {
     return Array.from(
       this.querySelectorAll(
         this.headingSelectors.join(','),
@@ -308,7 +308,7 @@ class LbdTreeview extends HTMLElement {
     )
   }
 
-  get listEl() {
+  get listEl(): HTMLElement | null {
     return this.querySelector(
       this.listSelectors.map((s) => `:scope > ${s}`).join(','),
     )

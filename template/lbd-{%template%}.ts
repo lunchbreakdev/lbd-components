@@ -1,7 +1,7 @@
 import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class Lbd{%Template%} extends HTMLElement {
-  static register(tagName) {
+  static register(tagName?: string) {
     if ('customElements' in window) {
       customElements.define(tagName || 'lbd-{%template%}', Lbd{%Template%});
     }

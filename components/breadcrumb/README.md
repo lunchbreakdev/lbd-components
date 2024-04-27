@@ -9,7 +9,7 @@ A Web Component for creating an accessible breadcrumb
 General usage example:
 
 ```html
-<script type="module" src="lbd-breadcrumb.js"></script>
+<script type="module" src="lbd-breadcrumb.min.js"></script>
 
 <lbd-breadcrumb>
 
