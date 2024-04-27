@@ -5,8 +5,11 @@
   "main": "lbd-tabs.min.js",
   "type": "module",
   "scripts": {
-    "start": "npx http-server .",
+    "start": "npx vite",
     "build": "npx esbuild lbd-tabs.js --bundle --minify --format=esm --outfile=lbd-tabs.min.js"
+  },
+  "dependencies": {
+    "@lunchbreakdev/web-component-utils": "0.0.0"
   },
   "repository": {
     "type": "git",

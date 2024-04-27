@@ -5,8 +5,11 @@
   "main": "lbd-{%template%}.min.js",
   "type": "module",
   "scripts": {
-    "start": "npx http-server .",
+    "start": "npx vite",
     "build": "npx esbuild lbd-{%template%}.js --bundle --minify  --format=esm --outfile=lbd-{%template%}.min.js"
+  },
+  "dependencies": {
+    "@lunchbreakdev/web-component-utils": "0.0.0"
   },
   "repository": {
     "type": "git",

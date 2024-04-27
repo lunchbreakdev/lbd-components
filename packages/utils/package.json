@@ -1,17 +1,16 @@
 {
-  "name": "@lunchbreakdev/lbd-breadcrumb",
+  "name": "@lunchbreakdev/web-component-utils",
   "version": "0.0.0",
-  "description": "A web component for creating an accessible breadcrumb",
-  "main": "lbd-breadcrumb.min.js",
+  "description": "A set of common utilities for building accessible web components",
+  "main": "web-component-utils.min.js",
   "type": "module",
   "scripts": {
-    "start": "npx vite",
-    "build": "npx esbuild lbd-breadcrumb.js --bundle --minify --format=esm --outfile=lbd-breadcrumb.min.js"
+    "build": "npx esbuild web-component-utils.js --bundle --minify --format=esm --outfile=web-component-utils.min.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
-    "directory": "./components/breadcrumb"
+    "directory": "./packages/utils"
   },
   "keywords": [
     "web",
@@ -19,14 +18,14 @@
     "components",
     "web components",
     "custom elements",
-    "breadcrumb"
+    "component library"
   ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "lbd-breadcrumb.min.js"
+    "web-component-utils.min.js"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"
@@ -36,5 +35,5 @@
     "email": "hello@lunchbreak.dev",
     "url": "https://lunchbreak.dev"
   },
-  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/breadcrumb#readme"
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/packages/utils#readme"
 }

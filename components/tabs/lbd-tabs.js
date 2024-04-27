@@ -1,7 +1,4 @@
-const uniqueId = (
-  (counter) => () =>
-    `:lbd-tab-${++counter}:`
-)(0)
+import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTabs extends HTMLElement {
   static attrs = {
@@ -26,7 +23,7 @@ class LbdTabs extends HTMLElement {
     this.listEl.addEventListener('keydown', this.handleKeydown)
 
     this.linkEls.forEach((tab, i) => {
-      const id = tab.id || uniqueId()
+      const id = tab.id || uniqueId('lbd-tab')
       const panelId = tab.getAttribute('href').slice(1)
       const panel = document.getElementById(panelId)
 

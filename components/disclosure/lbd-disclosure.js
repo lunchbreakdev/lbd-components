@@ -1,7 +1,4 @@
-const uniqueId = (
-  (counter) => () =>
-    `:lbd-disclosure-${++counter}:`
-)(0)
+import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdDisclosure extends HTMLElement {
   static register(tagName) {
@@ -20,7 +17,7 @@ class LbdDisclosure extends HTMLElement {
 
     const isOpen = this.detailsEl.getAttribute('open') !== null
 
-    const detailsId = this.detailsEl.id || uniqueId()
+    const detailsId = this.detailsEl.id || uniqueId('lbd-disclosure-')
     const summaryId = this.summaryEl.id || `${detailsId}summary`
 
     this.detailsEl.id = detailsId

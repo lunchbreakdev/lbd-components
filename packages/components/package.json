@@ -5,14 +5,15 @@
   "main": "lbd-components.min.js",
   "type": "module",
   "scripts": {
-    "start": "npx http-server .",
+    "start": "npx vite",
     "build": "npx esbuild lbd-components.js --bundle --minify --format=esm --outfile=lbd-components.min.js"
   },
   "dependencies": {
     "@lunchbreakdev/lbd-breadcrumb": "0.0.0",
     "@lunchbreakdev/lbd-disclosure": "0.0.0",
     "@lunchbreakdev/lbd-tabs": "0.0.0",
-    "@lunchbreakdev/lbd-tooltip": "0.0.0"
+    "@lunchbreakdev/lbd-tooltip": "0.0.0",
+    "@lunchbreakdev/lbd-treeview": "0.0.0"
   },
   "repository": {
     "type": "git",

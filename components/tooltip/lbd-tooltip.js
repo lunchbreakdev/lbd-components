@@ -1,7 +1,4 @@
-const uniqueId = (
-  (counter) => () =>
-    `:lbd-tooltip-${++counter}:`
-)(0)
+import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTooltip extends HTMLElement {
   static register(tagName) {
@@ -19,7 +16,7 @@ class LbdTooltip extends HTMLElement {
 
     if (!this.trigger) return
 
-    const tooltipId = uniqueId()
+    const tooltipId = uniqueId('lbd-tooltip-')
 
     const tooltip = document.createElement('div')
     tooltip.innerText = this.trigger.getAttribute('title')

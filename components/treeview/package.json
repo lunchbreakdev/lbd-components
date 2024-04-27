@@ -1,17 +1,20 @@
 {
-  "name": "@lunchbreakdev/lbd-breadcrumb",
+  "name": "@lunchbreakdev/lbd-treeview",
   "version": "0.0.0",
-  "description": "A web component for creating an accessible breadcrumb",
-  "main": "lbd-breadcrumb.min.js",
+  "description": "A web component for creating an accessible treeview",
+  "main": "lbd-treeview.min.js",
   "type": "module",
   "scripts": {
     "start": "npx vite",
-    "build": "npx esbuild lbd-breadcrumb.js --bundle --minify --format=esm --outfile=lbd-breadcrumb.min.js"
+    "build": "npx esbuild lbd-treeview.js --bundle --minify --format=esm --outfile=lbd-treeview.min.js"
+  },
+  "dependencies": {
+    "@lunchbreakdev/web-component-utils": "0.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
-    "directory": "./components/breadcrumb"
+    "directory": "./components/treeview"
   },
   "keywords": [
     "web",
@@ -19,14 +22,14 @@
     "components",
     "web components",
     "custom elements",
-    "breadcrumb"
+    "treeview"
   ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "lbd-breadcrumb.min.js"
+    "lbd-treeview.min.js"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"
@@ -36,5 +39,5 @@
     "email": "hello@lunchbreak.dev",
     "url": "https://lunchbreak.dev"
   },
-  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/breadcrumb#readme"
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/treeview#readme"
 }

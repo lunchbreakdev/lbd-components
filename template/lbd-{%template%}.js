@@ -1,7 +1,4 @@
-const uniqueId = (
-  (counter) => () =>
-    `:lbd-{%template%}-${++counter}:`
-)(0)
+import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class Lbd{%Template%} extends HTMLElement {
   static register(tagName) {
