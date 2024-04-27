@@ -1,19 +1,18 @@
 {
   "private": true,
   "workspaces": [
-    "components",
-    "components/*"
+    "components/*",
+    "packages/*"
   ],
   "type": "module",
   "scripts": {
     "start": "npx http-server ./components",
     "new": "node ./new.js",
     "build": "yarn workspaces foreach -Apt run build",
-    "version-packages": "changeset version",
     "release": "yarn build && changeset publish"
   },
-  "packageManager": "yarn@4.1.1",
   "dependencies": {
     "@changesets/cli": "^2.27.1"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }

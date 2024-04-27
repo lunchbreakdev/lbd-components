@@ -1,11 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-tooltip",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A web component for creating an accessible tooltip",
   "main": "lbd-tooltip.min.js",
+  "type": "module",
   "scripts": {
     "start": "npx http-server .",
-    "build": "npx esbuild lbd-tooltip.js --bundle --minify --outfile=lbd-tooltip.min.js"
+    "build": "npx esbuild lbd-tooltip.js --bundle --minify --format=esm --outfile=lbd-tooltip.min.js"
   },
   "repository": {
     "type": "git",

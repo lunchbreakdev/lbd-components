@@ -17,6 +17,9 @@ jobs:
         # https://github.com/actions/checkout
         uses: actions/checkout@v4
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Setup Node.js 20.x
         # https://github.com/actions/setup-node
         uses: actions/setup-node@v4

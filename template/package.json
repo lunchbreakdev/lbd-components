@@ -1,11 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-{%template%}",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A web component for creating an accessible {%template%}",
   "main": "lbd-{%template%}.min.js",
+  "type": "module",
   "scripts": {
     "start": "npx http-server .",
-    "build": "npx esbuild lbd-{%template%}.js --bundle --minify --outfile=lbd-{%template%}.min.js"
+    "build": "npx esbuild lbd-{%template%}.js --bundle --minify  --format=esm --outfile=lbd-{%template%}.min.js"
   },
   "repository": {
     "type": "git",

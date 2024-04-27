@@ -1,3 +1,4 @@
+import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 
@@ -31,4 +32,19 @@ for (const file of templateFiles) {
   fs.writeFileSync(path.resolve('components', newComponentName, file.name.replace(/{%template%}/g, newComponentName)), content)
 }
 
-console.log(`New component created successfully: components/${newComponentName}`);
+console.log('\x1b[32m' + `New component created successfully: components/${newComponentName}` + '\x1b[39m')
+
+execSync('yarn')
+
+execSync(
+  `yarn workspace @lunchbreakdev/lbd-components add @lunchbreakdev/lbd-${
+    newComponentName
+  }@0.0.0`
+)
+
+fs.appendFileSync(
+  path.resolve('packages/components/lbd-components.js'),
+  `export * from '@lunchbreakdev/lbd-${newComponentName}'\n`,
+)
+
+console.log('\x1b[32m' + `New component added to @lunchbreakdev/lbd-components package` + '\x1b[39m')

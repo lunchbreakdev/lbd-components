@@ -278,31 +278,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb":
+"@lunchbreakdev/lbd-breadcrumb@npm:0.0.0, @lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-components@workspace:components":
+"@lunchbreakdev/lbd-components@workspace:packages/components":
   version: 0.0.0-use.local
-  resolution: "@lunchbreakdev/lbd-components@workspace:components"
+  resolution: "@lunchbreakdev/lbd-components@workspace:packages/components"
+  dependencies:
+    "@lunchbreakdev/lbd-breadcrumb": "npm:0.0.0"
+    "@lunchbreakdev/lbd-disclosure": "npm:0.0.0"
+    "@lunchbreakdev/lbd-tabs": "npm:0.0.0"
+    "@lunchbreakdev/lbd-tooltip": "npm:0.0.0"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-disclosure@workspace:components/disclosure":
+"@lunchbreakdev/lbd-disclosure@npm:0.0.0, @lunchbreakdev/lbd-disclosure@workspace:components/disclosure":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-disclosure@workspace:components/disclosure"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-tabs@workspace:components/tabs":
+"@lunchbreakdev/lbd-tabs@npm:0.0.0, @lunchbreakdev/lbd-tabs@workspace:components/tabs":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-tabs@workspace:components/tabs"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-tooltip@workspace:components/tooltip":
+"@lunchbreakdev/lbd-tooltip@npm:0.0.0, @lunchbreakdev/lbd-tooltip@workspace:components/tooltip":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-tooltip@workspace:components/tooltip"
   languageName: unknown

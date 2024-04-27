@@ -1,16 +1,23 @@
 {
   "name": "@lunchbreakdev/lbd-components",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A web component library for creating components with accessible markup",
   "main": "lbd-components.min.js",
+  "type": "module",
   "scripts": {
     "start": "npx http-server .",
-    "build": "npx esbuild lbd-components.js --bundle --minify --outfile=lbd-components.min.js"
+    "build": "npx esbuild lbd-components.js --bundle --minify --format=esm --outfile=lbd-components.min.js"
+  },
+  "dependencies": {
+    "@lunchbreakdev/lbd-breadcrumb": "0.0.0",
+    "@lunchbreakdev/lbd-disclosure": "0.0.0",
+    "@lunchbreakdev/lbd-tabs": "0.0.0",
+    "@lunchbreakdev/lbd-tooltip": "0.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
-    "directory": "./components"
+    "directory": "./packages/components"
   },
   "keywords": [
     "web",
@@ -35,5 +42,5 @@
     "email": "hello@lunchbreak.dev",
     "url": "https://lunchbreak.dev"
   },
-  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components#readme"
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/packages/components#readme"
 }

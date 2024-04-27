@@ -1,11 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-tabs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A web component for creating an accessible tabs",
   "main": "lbd-tabs.min.js",
+  "type": "module",
   "scripts": {
     "start": "npx http-server .",
-    "build": "npx esbuild lbd-tabs.js --bundle --minify --outfile=lbd-tabs.min.js"
+    "build": "npx esbuild lbd-tabs.js --bundle --minify --format=esm --outfile=lbd-tabs.min.js"
   },
   "repository": {
     "type": "git",

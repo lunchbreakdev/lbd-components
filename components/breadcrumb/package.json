@@ -1,11 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-breadcrumb",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A web component for creating an accessible breadcrumb",
   "main": "lbd-breadcrumb.min.js",
+  "type": "module",
   "scripts": {
     "start": "npx http-server .",
-    "build": "npx esbuild lbd-breadcrumb.js --bundle --minify --outfile=lbd-breadcrumb.min.js"
+    "build": "npx esbuild lbd-breadcrumb.js --bundle --minify --format=esm --outfile=lbd-breadcrumb.min.js"
   },
   "repository": {
     "type": "git",
