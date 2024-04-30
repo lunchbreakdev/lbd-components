@@ -1,12 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-tooltip",
   "version": "0.0.0",
-  "description": "A web component for creating an accessible tooltip",
+  "description": "A web component for creating accessible tooltips",
   "main": "./dist/lbd-tooltip.min.js",
   "types": "./dist/lbd-tooltip.d.ts",
   "type": "module",
   "scripts": {
-    "start": "npx vite",
+    "dev": "yarn build --watch",
     "build": "tsc && npx esbuild lbd-tooltip.ts --bundle --minify --format=esm --outfile=dist/lbd-tooltip.min.js"
   },
   "dependencies": {

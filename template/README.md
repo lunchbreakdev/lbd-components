@@ -1,8 +1,8 @@
 # `lbd-{%template%}`
 
-A Web Component for creating an accessible {%template%}
+A Web Component for creating accessible {%template%}s
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/{%template%})** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/{%template%}/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/{%template%}/)**
 
 ## Examples
 

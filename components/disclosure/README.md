@@ -2,17 +2,20 @@
 
 A Web Component for creating accessible disclosures
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/disclosure)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)**
 
 ## Examples
 
 General usage example:
 
 ```html
-<script type="module" src="lbd-disclosure.js"></script>
+<script type="module" src="lbd-disclosure.min.js"></script>
 
 <lbd-disclosure>
-
+  <details>
+    <summary>More Information</summary>
+    Disclosure content goes here...
+  </details>
 </lbd-disclosure>
 ```
 

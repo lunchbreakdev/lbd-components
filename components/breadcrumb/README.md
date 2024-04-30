@@ -1,8 +1,8 @@
 # `lbd-breadcrumb`
 
-A Web Component for creating an accessible breadcrumb
+A Web Component for creating accessible breadcrumbs
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/breadcrumb)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)**
 
 ## Examples
 
@@ -12,7 +12,20 @@ General usage example:
 <script type="module" src="lbd-breadcrumb.min.js"></script>
 
 <lbd-breadcrumb>
-
+  <ol>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/profile">Profile</a>
+    </li>
+    <li>
+      <a href="/profile/settings">Settings</a>
+    </li>
+    <li>
+      <a href="profile/settings/account">Account</a>
+    </li>
+  </ol>
 </lbd-breadcrumb>
 ```
 

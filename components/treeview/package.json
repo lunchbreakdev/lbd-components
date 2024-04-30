@@ -1,12 +1,12 @@
 {
   "name": "@lunchbreakdev/lbd-treeview",
   "version": "0.0.0",
-  "description": "A web component for creating an accessible treeview",
+  "description": "A web component for creating accessible tree views",
   "main": "./dist/lbd-treeview.min.js",
   "types": "./dist/lbd-treeview.d.ts",
   "type": "module",
   "scripts": {
-    "start": "npx vite",
+    "dev": "yarn build --watch",
     "build": "tsc && npx esbuild lbd-treeview.ts --bundle --minify --format=esm --outfile=dist/lbd-treeview.min.js"
   },
   "dependencies": {

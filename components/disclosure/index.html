@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Demo of lbd-disclosure web component" />
-    <link rel="icon" href="https://fav.farm/🧩" />
-    <title>&lt;lbd-disclosure&gt; Web Component Demo</title>
-    <script type="module" src="lbd-disclosure.ts"></script>
-  </head>
-  <body>
-    <h1><code>lbd-disclosure</code></h1>
+---
+title: <lbd-disclosure>
+---
 
-    <lbd-disclosure>
-      <details>
-        <summary>More Information</summary>
-        Disclosure content goes here...
-      </details>
-    </lbd-disclosure>
-  </body>
-</html>
+{% renderFile './components/disclosure/README.md' %}
+
+<h2>Demo</h2>
+
+<lbd-disclosure>
+  <details>
+    <summary>More Information</summary>
+    Disclosure content goes here...
+  </details>
+</lbd-disclosure>

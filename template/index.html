@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Demo of lbd-{%template%} web component" />
-    <link rel="icon" href="https://fav.farm/🧩" />
-    <title>&lt;lbd-{%template%}&gt; Web Component Demo</title>
-    <script type="module" src="lbd-{%template%}.ts"></script>
-  </head>
-  <body>
-    <h1><code>lbd-{%template%}</code></h1>
+---
+title: <lbd-{%template%}>
+---
 
-    <lbd-{%template%}>
+{% renderFile './components/{%template%}/README.md' %}
 
-    </lbd-{%template%}>
-  </body>
-</html>
+<h2>Demo</h2>
+
+<lbd-{%template%}>
+
+</lbd-{%template%}>

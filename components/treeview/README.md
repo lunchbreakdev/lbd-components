@@ -1,8 +1,8 @@
 # `lbd-treeview`
 
-A Web Component for creating an accessible treeview
+A Web Component for creating an accessible tree views
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/treeview)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/)**
 
 ## Examples
 
@@ -11,8 +11,23 @@ General usage example:
 ```html
 <script type="module" src="lbd-treeview.min.js"></script>
 
-<lbd-treeview>
-
+<lbd-treeview label="Fruits and Veggies">
+  <ul>
+    <li>Apple</li>
+    <li>
+      Banana
+      <ul>
+        <li>Cucumber</li>
+      </ul>
+    </li>
+    <li>Dragonfruit</li>
+    <li>
+      Eggplant
+      <ul>
+        <li>Fennel</li>
+      </ul>
+    </li>
+  </ul>
 </lbd-treeview>
 ```
 

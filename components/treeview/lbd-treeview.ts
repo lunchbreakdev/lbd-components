@@ -2,8 +2,10 @@ import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTreeview extends HTMLElement {
   static register(tagName?: string) {
-    if ('customElements' in window) {
-      customElements.define(tagName || 'lbd-treeview', LbdTreeview);
+    const tag = tagName || 'lbd-treeview'
+
+    if ('customElements' in window && !customElements.get(tag)) {
+      customElements.define(tag, LbdTreeview);
     }
   }
 
@@ -11,13 +13,7 @@ class LbdTreeview extends HTMLElement {
     if (!this.listEl) return
 
     const addListAttributes = (el: HTMLElement, level: number) => {
-      const items = Array.from(
-        el.querySelectorAll(
-          this.listItemSelectors
-            .map((s) => `:scope > ${s}`)
-            .join(','),
-        ),
-      )
+      const items = Array.from(el.querySelectorAll(':scope > li'))
 
       for (let i = 0; i < items.length; i++) {
         const item = items[i]
@@ -90,11 +86,7 @@ class LbdTreeview extends HTMLElement {
 
     const expanded = el.getAttribute('aria-expanded') === 'true'
 
-    const rootListEl = el.closest('[role="tree"]')
-
-    if (!rootListEl) return
-
-    const listItems = Array.from(rootListEl.querySelectorAll('li'))
+    const listItems = this.listItemEls
 
     for (const item of listItems) {
       if (item.getAttribute('aria-selected') !== 'true' || item === el) {
@@ -141,28 +133,19 @@ class LbdTreeview extends HTMLElement {
     if (!keys.includes(e.key) && e.code !== `Key${e.key.toUpperCase()}`) {
       return
     }
-
-    const rootListEl = el.closest('[role="tree"]')
     const parentEl = el.parentElement
 
-    if (!rootListEl || !parentEl) return
+    if (!parentEl) return
 
     const siblingEls = Array.from(
-      parentEl.querySelectorAll(
-        this.listItemSelectors.map((s) => `:scope > ${s}`).join(','),
-      ),
+      parentEl.querySelectorAll(':scope > li'),
     )
 
-    const listItems = Array.from(rootListEl.querySelectorAll('li'))
+    const listItems = this.listItemEls
 
     const availableListItems = Array.from(
-      rootListEl.querySelectorAll(
-        this.listItemSelectors
-          .flatMap((s) => [
-            `:scope > ${s}`,
-            `${s}[aria-expanded="true"] > ul > li`,
-          ])
-          .join(','),
+      this.listEl.querySelectorAll(
+        ':scope > li, li[aria-expanded="true"] > ul > li'
       ),
     ) as HTMLElement[]
 
@@ -271,11 +254,7 @@ class LbdTreeview extends HTMLElement {
 
     if (!el) return
 
-    const rootListEl = el.closest('[role="tree"]')
-
-    if (!rootListEl) return
-
-    const listItems = Array.from(rootListEl.querySelectorAll('li')) as HTMLElement[]
+    const listItems = this.listItemEls
 
     for (const item of listItems) {
       if (item === el || item.getAttribute('tabindex') === '-1') continue
@@ -296,9 +275,7 @@ class LbdTreeview extends HTMLElement {
     '[role="heading"]',
   ]
 
-  listSelectors = ['ul', 'ol', '[role="list"]']
-
-  listItemSelectors = ['li', '[role="listitem"]']
+  listSelectors = ['ul', 'ol']
 
   get headingEls(): HTMLElement[] {
     return Array.from(
@@ -312,6 +289,12 @@ class LbdTreeview extends HTMLElement {
     return this.querySelector(
       this.listSelectors.map((s) => `:scope > ${s}`).join(','),
     )
+  }
+
+  get listItemEls(): HTMLLIElement[] {
+    if (!this.listEl) return []
+
+    return Array.from(this.listEl.querySelectorAll('li'))
   }
 }
 

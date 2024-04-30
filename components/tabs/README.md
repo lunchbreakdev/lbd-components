@@ -1,8 +1,8 @@
 # `lbd-tabs`
 
-A Web Component for creating an accessible tabs
+A Web Component for creating accessible tabs
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/tabs)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)**
 
 ## Examples
 
@@ -12,7 +12,27 @@ General usage example:
 <script type="module" src="lbd-tabs.min.js"></script>
 
 <lbd-tabs>
+  <ol>
+    <li>
+      <a href="#tab-1">Tab 1</a>
+    </li>
+    <li>
+      <a href="#tab-2">Tab 2</a>
+    </li>
+    <li>
+      <a href="#tab-3">Tab 3</a>
+    </li>
+  </ol>
 
+  <div id="tab-1">
+    Content 1
+  </div>
+  <div id="tab-2">
+    Content 2
+  </div>
+  <div id="tab-3">
+    Content 3
+  </div>
 </lbd-tabs>
 ```
 

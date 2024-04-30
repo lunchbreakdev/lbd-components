@@ -6,6 +6,7 @@
   "types": "./dist/web-component-utils.d.ts",
   "type": "module",
   "scripts": {
+    "start": "yarn build --watch",
     "build": "tsc && npx esbuild web-component-utils.ts --bundle --minify --format=esm --outfile=dist/web-component-utils.min.js"
   },
   "devDependencies": {

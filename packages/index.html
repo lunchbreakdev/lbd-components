@@ -1,0 +1,15 @@
+---
+title: Components
+---
+
+{% renderFile './packages/README.md' %}
+
+<ul>
+  {% for package in packages %}
+    <li>
+      <a href="/packages/{{ package | replace('@lunchbreakdev/', '') | replace('lbd-', '') }}">
+        <code>{{ package }}</code>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

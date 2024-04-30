@@ -2,8 +2,10 @@ import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdTooltip extends HTMLElement {
   static register(tagName?: string) {
-    if ('customElements' in window) {
-      customElements.define(tagName || 'lbd-tooltip', LbdTooltip);
+    const tag = tagName || 'lbd-tooltip'
+
+    if ('customElements' in window && !customElements.get(tag)) {
+      customElements.define(tag, LbdTooltip);
     }
   }
 

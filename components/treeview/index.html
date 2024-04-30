@@ -1,34 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Demo of lbd-treeview web component" />
-    <link rel="icon" href="https://fav.farm/🧩" />
-    <title>&lt;lbd-treeview&gt; Web Component Demo</title>
-    <script type="module" src="lbd-treeview.ts"></script>
-  </head>
-  <body>
-    <h1><code>lbd-treeview</code></h1>
+---
+title: <lbd-treeview>
+---
 
-    <lbd-treeview label="Label">
-      <h3>Heading</h3>
+{% renderFile './components/treeview/README.md' %}
+
+<h2>Demo</h2>
+
+<lbd-treeview label="Fruits and Veggies">
+  <ul>
+    <li>Apple</li>
+    <li>
+      Banana
       <ul>
-        <li>Apple</li>
-        <li>
-          Banana
-          <ul>
-            <li>Cucumber</li>
-          </ul>
-        </li>
-        <li>Dragonfruit</li>
-        <li>
-          Eggplant
-          <ul>
-            <li>Fennel</li>
-          </ul>
-        </li>
+        <li>Cucumber</li>
       </ul>
-    </lbd-treeview>
-  </body>
-</html>
+    </li>
+    <li>Dragonfruit</li>
+    <li>
+      Eggplant
+      <ul>
+        <li>Fennel</li>
+      </ul>
+    </li>
+  </ul>
+</lbd-treeview>

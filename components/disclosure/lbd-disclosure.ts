@@ -2,8 +2,10 @@ import { uniqueId } from '@lunchbreakdev/web-component-utils'
 
 class LbdDisclosure extends HTMLElement {
   static register(tagName?: string) {
-    if ('customElements' in window) {
-      customElements.define(tagName || 'lbd-disclosure', LbdDisclosure);
+    const tag = tagName || 'lbd-disclosure'
+
+    if ('customElements' in window && !customElements.get(tag)) {
+      customElements.define(tag, LbdDisclosure);
     }
   }
 

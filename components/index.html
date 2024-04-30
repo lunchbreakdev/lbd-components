@@ -1,0 +1,15 @@
+---
+title: Components
+---
+
+{% renderFile './components/README.md' %}
+
+<ul>
+  {% for component in components %}
+    <li>
+      <a href="/components/{{ component }}">
+        <code>&lt;lbd-{{ component }}&gt;</code>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

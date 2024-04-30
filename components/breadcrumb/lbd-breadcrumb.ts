@@ -1,7 +1,9 @@
 class LbdBreadcrumb extends HTMLElement {
   static register(tagName?: string) {
-    if ('customElements' in window) {
-      customElements.define(tagName || 'lbd-breadcrumb', LbdBreadcrumb);
+    const tag = tagName || 'lbd-breadcrumb'
+
+    if ('customElements' in window && !customElements.get(tag)) {
+      customElements.define(tag, LbdBreadcrumb);
     }
   }
 

@@ -6,7 +6,7 @@
   "types": "./dist/lbd-components.d.ts",
   "type": "module",
   "scripts": {
-    "start": "npx vite",
+    "start": "yarn build --watch",
     "build": "tsc && npx esbuild lbd-components.ts --bundle --minify --format=esm --outfile=dist/lbd-components.min.js"
   },
   "dependencies": {

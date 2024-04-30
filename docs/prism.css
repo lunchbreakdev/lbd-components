@@ -1,0 +1,186 @@
+:root {
+  --color-code-background: #f5f2f0;
+  --color-code-comment: slategray;
+  --color-code-function: #07a;
+  --color-code-important: var(--color-code-function)
+  --color-code-keyword: var(--color-code-number);
+  --color-code-number: var(--color-code-property);
+  --color-code-operator: #9a6e3a;
+  --color-code-property: #905;
+  --color-code-puntuation: #999;
+  --color-code-selector: #690;
+  --color-code-text: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-code-background: #2b2b2b;
+    --color-code-comment: #d4d0ab;
+    --color-code-function: #ffd700;
+    --color-code-important: var(--color-code-function)
+    --color-code-keyword: var(--color-code-number);
+    --color-code-number: #00e0e0;
+    --color-code-operator: var(--color-code-number);
+    --color-code-property: #ffa07a;
+    --color-code-puntuation: #fefefe;
+    --color-code-selector: #abe338;
+    --color-code-text: #f8f8f2;
+  }
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--color-code-text);
+  background: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  width: 100%;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--color-code-background);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-code-comment);
+}
+
+.token.punctuation {
+  color: var(--color-code-punctuation);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--color-code-property);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--color-code-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--color-code-selector);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--color-code-operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: var(--color-code-function);
+}
+
+.token.keyword {
+  color: var(--color-code-keyword);
+}
+
+.token.regex,
+.token.important {
+  color: var(--color-code-important);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: windowText;
+    background: window;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: window;
+  }
+
+  .token.important {
+    background: highlight;
+    color: window;
+    font-weight: normal;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.selector {
+    font-weight: bold;
+  }
+
+  .token.attr-value,
+  .token.comment,
+  .token.doctype,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.property,
+  .token.string {
+    color: highlight;
+  }
+
+  .token.attr-value,
+  .token.url {
+    font-weight: normal;
+  }
+}

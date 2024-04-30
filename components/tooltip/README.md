@@ -1,8 +1,8 @@
 # `lbd-tooltip`
 
-A Web Component for creating an accessible tooltip
+A Web Component for creating accessible tooltips
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components/tooltip)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)**
 
 ## Examples
 
@@ -12,7 +12,11 @@ General usage example:
 <script type="module" src="lbd-tooltip.min.js"></script>
 
 <lbd-tooltip>
-
+  <img
+    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
+    alt="Tom Cook profile picture"
+    title="Tom Cook"
+  />
 </lbd-tooltip>
 ```
 

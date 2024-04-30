@@ -4,18 +4,20 @@
     "components/*",
     "packages/*"
   ],
-  "type": "module",
   "scripts": {
     "start": "npx http-server ./components",
-    "new": "node ./new.js",
+    "new": "node ./new.mjs",
     "build": "yarn workspaces foreach -Apt run build",
-    "release": "yarn build && changeset publish"
+    "release": "yarn build && changeset publish",
+    "docs": "eleventy --serve",
+    "docs:build": "eleventy"
   },
-  "dependencies": {
-    "@changesets/cli": "^2.27.1"
-  },
-  "packageManager": "yarn@4.1.1",
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@changesets/cli": "^2.27.1",
     "typescript": "^5.4.5"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
