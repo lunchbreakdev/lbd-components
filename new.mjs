@@ -36,15 +36,9 @@ console.log('\x1b[32m' + `New component created successfully: components/${newCo
 
 execSync('yarn')
 
-execSync(
-  `yarn workspace @lunchbreakdev/lbd-components add @lunchbreakdev/lbd-${
-    newComponentName
-  }@0.0.0`
-)
-
 fs.appendFileSync(
   path.resolve('packages/components/lbd-components.ts'),
-  `export * from '@lunchbreakdev/lbd-${newComponentName}'\n`,
+  `export * from '../../components/${newComponentName}/lbd-${newComponentName}'\n`,
 )
 
 console.log('\x1b[32m' + `New component added to @lunchbreakdev/lbd-components package` + '\x1b[39m')
