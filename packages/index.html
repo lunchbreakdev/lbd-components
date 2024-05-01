@@ -7,8 +7,8 @@ title: Components
 <ul>
   {% for package in packages %}
     <li>
-      <a href="/packages/{{ package | replace('@lunchbreakdev/', '') | replace('lbd-', '') }}">
-        <code>{{ package }}</code>
+      <a href="/packages/{{ package }}" class="font-mono">
+        @lunchbreakdev/lbd-{{ package }}
       </a>
     </li>
   {% endfor %}

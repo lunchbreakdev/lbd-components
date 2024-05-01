@@ -6,8 +6,7 @@
   "types": "./dist/lbd-tooltip.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "yarn build --watch",
-    "build": "npx tsup lbd-tooltip.ts --dts --minify --clean --format esm"
+    "build": "tsup lbd-tooltip.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,7 @@
 :root {
   --color-accent: #059669;
   --color-background: #f5f5f4;
+  --color-paper: white;
   --color-text: #0c0a09;
   --spacing-wrap: 5.62vw;
 }
@@ -9,6 +10,7 @@
   :root {
     --color-accent: #34d399;
     --color-background: #1c1917;
+    --color-paper: #0c0a09;
     --color-text: #fafaf9;
   }
 }
@@ -45,8 +47,15 @@ a:hover {
   text-decoration: underline;
 }
 
+.content :not(pre):not(h1) code {
+  background-color: var(--color-code-background);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0.25rem .5rem;
+}
+
 .skip-link {
-  background-color: var(--color-background);
+  background-color: var(--color-paper);
   font-weight: 600;
   left: var(--spacing-wrap);
   padding: 0.5rem 0.75rem;
@@ -80,17 +89,20 @@ header > a {
   padding: 0.5rem 0;
 }
 
-header > a code {
+header > a {
   font-size: 1.125rem;
+  height: 3rem;
+  word-spacing: -0.25rem;
 }
 
-header nav {
+header nav:not(:first-of-type) {
   font-size: 0.875rem;
   margin-top: 0.5rem;
 }
 
 header nav a {
   display: inline-block;
+  font-size: 0.875rem;
   padding-bottom: 0.25rem;
   padding-top: 0.25rem;
 }
@@ -105,10 +117,6 @@ header nav a:has(svg):not(:first-of-type) {
 
 header nav a svg {
   display: block;
-}
-
-header code {
-  font-size: 0.75rem;
 }
 
 header ul {
@@ -132,6 +140,7 @@ header ul ul {
 
 header ul ul a {
   color: var(--color-accent);
+  font-size: 0.75rem;
 }
 
 main {
@@ -161,6 +170,10 @@ main {
 
 .content pre code {
   font-size: 0.875rem;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 footer {
@@ -198,7 +211,7 @@ footer p {
 @media (min-width: 768px) {
   body {
     gap: var(--spacing-wrap);
-    grid-template-columns: 250px minmax(0, 1fr);
+    grid-template-columns: 200px minmax(0, 1fr);
     grid-template-rows: 1fr;
   }
 
@@ -213,7 +226,6 @@ footer p {
   header > a {
     background: linear-gradient(to bottom,var(--color-background) 0 calc(100% - .75rem), transparent 100%);
     display: flex;
-    height: 3rem;
     position: sticky;
     top: 0;
   }

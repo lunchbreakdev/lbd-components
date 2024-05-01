@@ -9,7 +9,7 @@ A Web Component for creating accessible tabs
 General usage example:
 
 ```html
-<script type="module" src="lbd-tabs.min.js"></script>
+<script type="module" src="lbd-tabs.js"></script>
 
 <lbd-tabs>
   <ol>

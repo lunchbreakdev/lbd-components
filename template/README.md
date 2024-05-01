@@ -9,7 +9,7 @@ A Web Component for creating accessible {%template%}s
 General usage example:
 
 ```html
-<script type="module" src="lbd-{%template%}.min.js"></script>
+<script type="module" src="lbd-{%template%}.js"></script>
 
 <lbd-{%template%}>
 

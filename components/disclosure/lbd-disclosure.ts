@@ -5,7 +5,7 @@ class LbdDisclosure extends HTMLElement {
     const tag = tagName || 'lbd-disclosure'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, LbdDisclosure);
+      customElements.define(tag, LbdDisclosure)
     }
   }
 
@@ -14,7 +14,7 @@ class LbdDisclosure extends HTMLElement {
 
     this._observer.observe(this.detailsEl, {
       attributes: true,
-      attributeFilter: ['open']
+      attributeFilter: ['open'],
     })
 
     const isOpen = this.detailsEl.getAttribute('open') !== null
@@ -36,7 +36,8 @@ class LbdDisclosure extends HTMLElement {
 
   _observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      const isOpen = (mutation.target as HTMLElement).getAttribute('open') !== null
+      const isOpen =
+        (mutation.target as HTMLElement).getAttribute('open') !== null
       this.summaryEl?.setAttribute('aria-expanded', String(isOpen))
     })
   })

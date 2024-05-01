@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch --sourcemap",
-    "build": "npx tsup lbd-components.ts --dts --minify --clean --format esm"
+    "build": "tsup lbd-components.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",

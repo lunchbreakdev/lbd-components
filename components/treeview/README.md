@@ -9,7 +9,7 @@ A Web Component for creating an accessible tree views
 General usage example:
 
 ```html
-<script type="module" src="lbd-treeview.min.js"></script>
+<script type="module" src="lbd-treeview.js"></script>
 
 <lbd-treeview label="Fruits and Veggies">
   <ul>

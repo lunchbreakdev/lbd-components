@@ -5,7 +5,7 @@ class LbdTreeview extends HTMLElement {
     const tag = tagName || 'lbd-treeview'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, LbdTreeview);
+      customElements.define(tag, LbdTreeview)
     }
   }
 
@@ -52,7 +52,10 @@ class LbdTreeview extends HTMLElement {
 
     addListAttributes(this.listEl, 1)
 
-    if (this.listEl.hasAttribute('label') || this.listEl.hasAttribute('aria-labelledby')) {
+    if (
+      this.listEl.hasAttribute('label') ||
+      this.listEl.hasAttribute('aria-labelledby')
+    ) {
       return
     }
 
@@ -68,9 +71,7 @@ class LbdTreeview extends HTMLElement {
   }
 
   disconnectedCallback() {
-    const listItems = Array.from(
-      this.querySelectorAll('[role="tree"] li'),
-    )
+    const listItems = Array.from(this.querySelectorAll('[role="tree"] li'))
 
     for (const item of listItems) {
       item.removeEventListener('click', this.toggleSubList)
@@ -137,15 +138,13 @@ class LbdTreeview extends HTMLElement {
 
     if (!parentEl) return
 
-    const siblingEls = Array.from(
-      parentEl.querySelectorAll(':scope > li'),
-    )
+    const siblingEls = Array.from(parentEl.querySelectorAll(':scope > li'))
 
     const listItems = this.listItemEls
 
     const availableListItems = Array.from(
       this.listEl.querySelectorAll(
-        ':scope > li, li[aria-expanded="true"] > ul > li'
+        ':scope > li, li[aria-expanded="true"] > ul > li',
       ),
     ) as HTMLElement[]
 
@@ -209,7 +208,7 @@ class LbdTreeview extends HTMLElement {
           el.querySelector(':scope > ul')?.removeAttribute('hidden')
           el.setAttribute('aria-expanded', 'true')
         } else {
-          (el.querySelector(':scope > ul > li') as HTMLElement)?.focus()
+          ;(el.querySelector(':scope > ul > li') as HTMLElement)?.focus()
         }
         break
 
@@ -265,24 +264,12 @@ class LbdTreeview extends HTMLElement {
     el.setAttribute('tabindex', '0')
   }
 
-  headingSelectors = [
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
-    '[role="heading"]',
-  ]
+  headingSelectors = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', '[role="heading"]']
 
   listSelectors = ['ul', 'ol']
 
   get headingEls(): HTMLElement[] {
-    return Array.from(
-      this.querySelectorAll(
-        this.headingSelectors.join(','),
-      ),
-    )
+    return Array.from(this.querySelectorAll(this.headingSelectors.join(',')))
   }
 
   get listEl(): HTMLElement | null {

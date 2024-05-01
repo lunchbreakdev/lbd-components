@@ -9,7 +9,7 @@ A Web Component for creating accessible disclosures
 General usage example:
 
 ```html
-<script type="module" src="lbd-disclosure.min.js"></script>
+<script type="module" src="lbd-disclosure.js"></script>
 
 <lbd-disclosure>
   <details>

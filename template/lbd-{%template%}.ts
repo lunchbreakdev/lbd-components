@@ -5,7 +5,7 @@ class Lbd{%Template%} extends HTMLElement {
     const tag = tagName || 'lbd-{%template%}'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, Lbd{%Template%});
+      customElements.define(tag, Lbd{%Template%})
     }
   }
 

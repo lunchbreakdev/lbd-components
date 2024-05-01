@@ -5,7 +5,7 @@ class LbdTooltip extends HTMLElement {
     const tag = tagName || 'lbd-tooltip'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, LbdTooltip);
+      customElements.define(tag, LbdTooltip)
     }
   }
 
@@ -73,7 +73,10 @@ class LbdTooltip extends HTMLElement {
   }
 
   get trigger(): HTMLElement | null {
-    return this.querySelector('[title]') || this.querySelector('[data-tooltip-trigger]')
+    return (
+      this.querySelector('[title]') ||
+      this.querySelector('[data-tooltip-trigger]')
+    )
   }
 
   get tooltip(): HTMLElement {

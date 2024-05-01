@@ -3,7 +3,7 @@ class LbdBreadcrumb extends HTMLElement {
     const tag = tagName || 'lbd-breadcrumb'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, LbdBreadcrumb);
+      customElements.define(tag, LbdBreadcrumb)
     }
   }
 
@@ -19,10 +19,7 @@ class LbdBreadcrumb extends HTMLElement {
       this.navEl.setAttribute('aria-label', 'Breadcrumb')
     }
 
-    this.linkEls[this.linkEls.length - 1].setAttribute(
-      'aria-current',
-      'page',
-    )
+    this.linkEls[this.linkEls.length - 1].setAttribute('aria-current', 'page')
   }
 
   get navEl(): HTMLElement {

@@ -2,14 +2,14 @@ import { uniqueId } from '../../utils/uniqueId'
 
 class LbdTabs extends HTMLElement {
   static attrs = {
-    vertical: 'vertical'
+    vertical: 'vertical',
   }
 
   static register(tagName?: string) {
     const tag = tagName || 'lbd-tabs'
 
     if ('customElements' in window && !customElements.get(tag)) {
-      customElements.define(tag, LbdTabs);
+      customElements.define(tag, LbdTabs)
     }
   }
 
@@ -159,9 +159,7 @@ class LbdTabs extends HTMLElement {
   }
 
   get currentTab(): HTMLAnchorElement | null | undefined {
-    return this.listEl?.querySelector(
-      'a[href^="#"][aria-selected="true"]',
-    )
+    return this.listEl?.querySelector('a[href^="#"][aria-selected="true"]')
   }
 
   get currentPanel(): HTMLElement | null {

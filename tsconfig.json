@@ -2,6 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
+    "esModuleInterop": true,
     "lib": ["DOM", "ESNext"]
   },
   "exclude": ["template"]
