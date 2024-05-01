@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "new": "node ./new.mjs",
-    "build": "tsc && yarn workspaces foreach -Apt run build",
+    "new": "node ./new.js",
+    "build": "yarn workspaces foreach -Apt run build",
     "release": "yarn build && changeset publish",
     "docs": "eleventy --serve",
     "docs:build": "eleventy"
@@ -16,6 +16,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "@changesets/cli": "^2.27.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   },
   "packageManager": "yarn@4.1.1"

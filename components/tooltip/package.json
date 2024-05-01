@@ -2,12 +2,12 @@
   "name": "@lunchbreakdev/lbd-tooltip",
   "version": "0.0.0",
   "description": "A web component for creating accessible tooltips",
-  "main": "./lbd-tooltip.min.js",
-  "types": "./lbd-tooltip.d.ts",
+  "main": "./dist/lbd-tooltip.js",
+  "types": "./dist/lbd-tooltip.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch",
-    "build": "npx esbuild lbd-tooltip.ts --bundle --minify --format=esm --outfile=lbd-tooltip.min.js"
+    "build": "npx tsup lbd-tooltip.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
     "access": "public"
   },
   "files": [
-    "lbd-tooltip.d.ts",
-    "lbd-tooltip.min.js"
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

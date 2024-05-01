@@ -6,7 +6,5 @@
 !.yarn/versions
 
 _site/
+dist/
 node_modules/
-
-*.min.js
-*.d.ts

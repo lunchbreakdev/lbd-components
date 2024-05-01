@@ -2,12 +2,12 @@
   "name": "@lunchbreakdev/lbd-tabs",
   "version": "0.0.0",
   "description": "A web component for creating accessible tabs",
-  "main": "./lbd-tabs.min.js",
-  "types": "./lbd-tabs.d.ts",
+  "main": "./dist/lbd-tabs.js",
+  "types": "./dist/lbd-tabs.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch",
-    "build": "npx esbuild lbd-tabs.ts --bundle --minify --format=esm --outfile=lbd-tabs.min.js"
+    "build": "npx tsup lbd-tabs.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
     "access": "public"
   },
   "files": [
-    "lbd-tabs.d.ts",
-    "lbd-tabs.min.js"
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

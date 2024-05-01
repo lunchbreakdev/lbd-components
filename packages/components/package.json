@@ -2,12 +2,12 @@
   "name": "@lunchbreakdev/lbd-components",
   "version": "0.0.0",
   "description": "A web component library for creating components with accessible markup",
-  "main": "./lbd-components.min.js",
-  "types": "./lbd-components.d.ts",
+  "main": "./dist/lbd-components.js",
+  "types": "./dist/lbd-components.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch --sourcemap",
-    "build": "npx esbuild lbd-components.ts --bundle --minify --format=esm --outfile=lbd-components.min.js"
+    "build": "npx tsup lbd-components.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
     "access": "public"
   },
   "files": [
-    "lbd-components.d.ts",
-    "lbd-components.min.js"
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"
