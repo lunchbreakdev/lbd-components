@@ -2,15 +2,12 @@
   "name": "@lunchbreakdev/lbd-breadcrumb",
   "version": "0.0.0",
   "description": "A web component for creating accessible breadcrumbs",
-  "main": "./dist/lbd-breadcrumb.min.js",
-  "types": "./dist/lbd-breadcrumb.d.ts",
+  "main": "./lbd-breadcrumb.min.js",
+  "types": "./lbd-breadcrumb.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch",
-    "build": "tsc && npx esbuild lbd-breadcrumb.ts --bundle --minify --format=esm --outfile=dist/lbd-breadcrumb.min.js"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5"
+    "build": "npx esbuild lbd-breadcrumb.ts --bundle --minify --format=esm --outfile=lbd-breadcrumb.min.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +27,8 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "lbd-breadcrumb.d.ts",
+    "lbd-breadcrumb.min.js"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

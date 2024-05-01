@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "lib": ["DOM", "ESNext"]
-  }
+  },
+  "exclude": ["template"]
 }

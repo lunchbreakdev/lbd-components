@@ -2,18 +2,12 @@
   "name": "@lunchbreakdev/lbd-{%template%}",
   "version": "0.0.0",
   "description": "A web component for creating accessible {%template%}s",
-  "main": "./dist/lbd-{%template%}.min.js",
-  "types": "./dist/lbd-{%template%}.d.ts",
+  "main": "./lbd-{%template%}.min.js",
+  "types": "./lbd-{%template%}.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch",
-    "build": "tsc && npx esbuild lbd-{%template%}.ts --bundle --minify  --format=esm --outfile=dist/lbd-{%template%}.min.js"
-  },
-  "dependencies": {
-    "@lunchbreakdev/web-component-utils": "0.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5"
+    "build": "tsc && npx esbuild lbd-{%template%}.ts --bundle --minify  --format=esm --outfile=lbd-{%template%}.min.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +27,8 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "lbd-{%template%}.d.ts",
+    "lbd-{%template%}.min.js"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

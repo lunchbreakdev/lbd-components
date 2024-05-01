@@ -1,8 +1,8 @@
-# `lbd-components`
+# `@lunchbreakdev/lbd-components`
 
 A Web Component library for creating components with accessible markup
 
-**[Demo](https://lunchbreakdev.github.io/lbd-components/components)** | **[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/)**
+**[WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/)**
 
 ## Examples
 

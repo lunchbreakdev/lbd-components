@@ -2,18 +2,12 @@
   "name": "@lunchbreakdev/lbd-treeview",
   "version": "0.0.0",
   "description": "A web component for creating accessible tree views",
-  "main": "./dist/lbd-treeview.min.js",
-  "types": "./dist/lbd-treeview.d.ts",
+  "main": "./lbd-treeview.min.js",
+  "types": "./lbd-treeview.d.ts",
   "type": "module",
   "scripts": {
     "dev": "yarn build --watch",
-    "build": "tsc && npx esbuild lbd-treeview.ts --bundle --minify --format=esm --outfile=dist/lbd-treeview.min.js"
-  },
-  "dependencies": {
-    "@lunchbreakdev/web-component-utils": "0.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5"
+    "build": "npx esbuild lbd-treeview.ts --bundle --minify --format=esm --outfile=lbd-treeview.min.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +27,8 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "lbd-treeview.d.ts",
+    "lbd-treeview.min.js"
   ],
   "bugs": {
     "url": "https://github.com/lunchbreakdev/lbd-components/issues"

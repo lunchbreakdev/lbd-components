@@ -1,4 +1,4 @@
-import { uniqueId } from '@lunchbreakdev/web-component-utils'
+import { uniqueId } from '../../utils/uniqueId'
 
 class LbdDisclosure extends HTMLElement {
   static register(tagName?: string) {

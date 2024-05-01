@@ -5,9 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "npx http-server ./components",
     "new": "node ./new.mjs",
-    "build": "yarn workspaces foreach -Apt run build",
+    "build": "tsc && yarn workspaces foreach -Apt run build",
     "release": "yarn build && changeset publish",
     "docs": "eleventy --serve",
     "docs:build": "eleventy"

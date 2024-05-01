@@ -463,68 +463,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lunchbreakdev/lbd-breadcrumb@npm:0.0.0, @lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb":
+"@lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-breadcrumb@workspace:components/breadcrumb"
-  dependencies:
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
 "@lunchbreakdev/lbd-components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-components@workspace:packages/components"
-  dependencies:
-    "@lunchbreakdev/lbd-breadcrumb": "npm:0.0.0"
-    "@lunchbreakdev/lbd-disclosure": "npm:0.0.0"
-    "@lunchbreakdev/lbd-tabs": "npm:0.0.0"
-    "@lunchbreakdev/lbd-tooltip": "npm:0.0.0"
-    "@lunchbreakdev/lbd-treeview": "npm:0.0.0"
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-disclosure@npm:0.0.0, @lunchbreakdev/lbd-disclosure@workspace:components/disclosure":
+"@lunchbreakdev/lbd-disclosure@workspace:components/disclosure":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-disclosure@workspace:components/disclosure"
-  dependencies:
-    "@lunchbreakdev/web-component-utils": "npm:0.0.0"
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-tabs@npm:0.0.0, @lunchbreakdev/lbd-tabs@workspace:components/tabs":
+"@lunchbreakdev/lbd-tabs@workspace:components/tabs":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-tabs@workspace:components/tabs"
-  dependencies:
-    "@lunchbreakdev/web-component-utils": "npm:0.0.0"
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-tooltip@npm:0.0.0, @lunchbreakdev/lbd-tooltip@workspace:components/tooltip":
+"@lunchbreakdev/lbd-tooltip@workspace:components/tooltip":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-tooltip@workspace:components/tooltip"
-  dependencies:
-    "@lunchbreakdev/web-component-utils": "npm:0.0.0"
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
-"@lunchbreakdev/lbd-treeview@npm:0.0.0, @lunchbreakdev/lbd-treeview@workspace:components/treeview":
+"@lunchbreakdev/lbd-treeview@workspace:components/treeview":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-treeview@workspace:components/treeview"
-  dependencies:
-    "@lunchbreakdev/web-component-utils": "npm:0.0.0"
-    typescript: "npm:^5.4.5"
-  languageName: unknown
-  linkType: soft
-
-"@lunchbreakdev/web-component-utils@npm:0.0.0, @lunchbreakdev/web-component-utils@workspace:packages/web-component-utils":
-  version: 0.0.0-use.local
-  resolution: "@lunchbreakdev/web-component-utils@workspace:packages/web-component-utils"
-  dependencies:
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 

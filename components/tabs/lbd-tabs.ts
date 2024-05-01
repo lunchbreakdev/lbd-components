@@ -1,4 +1,4 @@
-import { uniqueId } from '@lunchbreakdev/web-component-utils'
+import { uniqueId } from '../../utils/uniqueId'
 
 class LbdTabs extends HTMLElement {
   static attrs = {
@@ -6,8 +6,10 @@ class LbdTabs extends HTMLElement {
   }
 
   static register(tagName?: string) {
-    if ('customElements' in window) {
-      customElements.define(tagName || 'lbd-tabs', LbdTabs);
+    const tag = tagName || 'lbd-tabs'
+
+    if ('customElements' in window && !customElements.get(tag)) {
+      customElements.define(tag, LbdTabs);
     }
   }
 
@@ -136,9 +138,9 @@ class LbdTabs extends HTMLElement {
 
     if (this.currentTab === event.target) return
 
+    this.currentPanel?.setAttribute('hidden', '')
     this.currentTab?.setAttribute('aria-selected', 'false')
     this.currentTab?.setAttribute('tabindex', '-1')
-    this.currentPanel?.setAttribute('hidden', '')
 
     this.setNewTab(event.target as HTMLElement)
   }
