@@ -14,21 +14,21 @@ class LbdTooltip extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' })
 
-    shadowRoot.appendChild(document.createElement('slot'))
-
     if (!this.trigger) return
 
     const tooltipId = uniqueId('lbd-tooltip-')
 
-    const tooltip = document.createElement('div')
-    tooltip.innerText = this.trigger.getAttribute('title')
-
-    tooltip.id = tooltipId
-    tooltip.setAttribute('role', 'tooltip')
-    tooltip.setAttribute('part', 'tooltip')
-    tooltip.setAttribute('hidden', '')
-
-    shadowRoot.appendChild(tooltip)
+    shadowRoot.innerHTML = `
+      <slot></slot>
+      <div
+        id="${tooltipId}"
+        role="tooltip"
+        part="tooltip"
+        hidden
+      >
+        ${this.trigger.getAttribute('title')}
+      </div>
+    `
 
     this.trigger.addEventListener('mouseenter', this.handleShow)
     this.trigger.addEventListener('mouseleave', this.handleHide)

@@ -6,8 +6,8 @@
   "types": "./dist/lbd-components.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "yarn build --watch --sourcemap",
-    "build": "tsup lbd-components.ts --dts --minify --clean --format esm"
+    "dev": "npx tsup lbd-components.ts --minify --format esm --watch --sourcemap",
+    "build": "npx tsup lbd-components.ts --dts --minify --clean --format esm"
   },
   "repository": {
     "type": "git",

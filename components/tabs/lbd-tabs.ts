@@ -139,8 +139,8 @@ class LbdTabs extends HTMLElement {
     if (this.currentTab === event.target) return
 
     this.currentPanel?.setAttribute('hidden', '')
-    this.currentTab?.setAttribute('aria-selected', 'false')
     this.currentTab?.setAttribute('tabindex', '-1')
+    this.currentTab?.setAttribute('aria-selected', 'false')
 
     this.setNewTab(event.target as HTMLElement)
   }
