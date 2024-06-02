@@ -1,0 +1,11 @@
+components:
+  - changed-files:
+    - any-glob-to-any-file: 'components/**/*.ts'
+    - all-globs-to-all-files: '!components/**/*.test.ts'
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-files:
+      - 'docs/**/*'
+      - '**/README.md'
+      - '**/index.html'

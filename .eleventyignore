@@ -1,4 +1,4 @@
 .changeset/
 template/
 
-**/README.md
+**/*.md
