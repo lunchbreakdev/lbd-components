@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix .",
     "release": "yarn build && changeset publish",
     "docs": "eleventy --serve",
-    "docs:build": "eleventy"
+    "docs:build": "yarn workspace @lunchbreakdev/lbd-components build && eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -71,5 +71,5 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.2.2"
 }

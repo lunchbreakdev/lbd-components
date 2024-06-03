@@ -180,6 +180,16 @@ main {
   font-size: 0.875rem;
 }
 
+.edit-link {
+  align-items: center;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.edit-link svg {
+  margin-right: .25rem;
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }

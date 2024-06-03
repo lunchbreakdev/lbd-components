@@ -68,6 +68,18 @@ title: Lunch Break Dev Web Components
     <main id="main">
       <div class="content">
         {{ content | safe }}
+
+        <a
+          href="https://github.com/lunchbreakdev/lbd-components/blob/main/{{ page.filePathStem | replace('/index', '/README.md') }}"
+          target="_blank"
+          rel="noreferrer"
+          class="edit-link"
+        >
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415zM16 5l3 3"></path>
+          </svg>
+          Edit this page
+        </a>
       </div>
 
       <footer>
