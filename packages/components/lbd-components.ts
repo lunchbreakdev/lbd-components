@@ -1,4 +1,5 @@
 export * from '../../components/breadcrumb/lbd-breadcrumb'
+export * from '../../components/carousel/lbd-carousel'
 export * from '../../components/disclosure/lbd-disclosure'
 export * from '../../components/spinbutton/lbd-spinbutton'
 export * from '../../components/tabs/lbd-tabs'

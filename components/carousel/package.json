@@ -1,0 +1,40 @@
+{
+  "name": "@lunchbreakdev/lbd-carousel",
+  "version": "0.0.0",
+  "description": "A web component for creating accessible carousels",
+  "main": "./dist/lbd-carousel.js",
+  "types": "./dist/lbd-carousel.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup lbd-carousel.ts --dts --minify --clean --format esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunchbreakdev/lbd-components.git",
+    "directory": "./components/carousel"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements",
+    "carousel"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/lunchbreakdev/lbd-components/issues"
+  },
+  "author": {
+    "name": "Morgan Spencer",
+    "email": "hello@lunchbreak.dev",
+    "url": "https://lunchbreak.dev"
+  },
+  "homepage": "https://github.com/lunchbreakdev/lbd-components/tree/main/components/carousel#readme"
+}
