@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix .",
     "release": "yarn build && changeset publish",
     "docs": "eleventy --serve",
-    "docs:build": "yarn workspace @lunchbreakdev/lbd-components build && eleventy"
+    "docs:build": "yarn workspace @lunchbreakdev/lbd-components build && rm -rf docs/_site && eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

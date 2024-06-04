@@ -7,5 +7,6 @@ documentation:
   - changed-files:
     - any-glob-to-any-files:
       - 'docs/**/*'
+      - '**/CHANGELOG.md'
       - '**/README.md'
       - '**/index.html'
