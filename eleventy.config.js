@@ -3,6 +3,9 @@ const path = require('path')
 
 const { EleventyRenderPlugin } = require('@11ty/eleventy')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
+const pluginTOC = require('eleventy-plugin-toc')
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
@@ -31,6 +34,19 @@ module.exports = function (eleventyConfig) {
       .filter((dirent) => dirent.isDirectory())
       .map((dirent) => dirent.name)
   })
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt().use(markdownItAnchor, {
+      tabIndex: false,
+      level: [2, 3, 4]
+    })
+  )
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3', 'h4']
+  })
+  eleventyConfig.ignores.add('**/*.md')
+  eleventyConfig.addWatchTarget("**/README.md");
+  eleventyConfig.addWatchTarget("**/CHANGELOG.md");
 
   return {
     dir: {

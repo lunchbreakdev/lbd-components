@@ -6,7 +6,7 @@
   ],
   "commit": false,
   "fixed": [],
-  "linked": [],
+  "linked": [["@lunchbreakdev/lbd-components", "@lunchbreakdev/lbd-*"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

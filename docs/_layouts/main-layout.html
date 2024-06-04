@@ -18,6 +18,9 @@ description: A Web Component library for creating components with accessible mar
     <script type="module" src="/lbd-components.js"></script>
   </head>
   <body>
+    {% if content | toc %}
+    <a class="skip-link toc" href="#toc">Skip to table of contents</a>
+    {% endif %}
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header>
@@ -87,7 +90,7 @@ description: A Web Component library for creating components with accessible mar
 
         <p>
           <a
-            href="https://github.com/lunchbreakdev/lbd-components/blob/main/{{ page.filePathStem | replace('/index', '/README.md') }}"
+            href="https://github.com/lunchbreakdev/lbd-components/blob/main{{ page.filePathStem | replace('/index', '/README.md') }}"
             target="_blank"
             rel="noreferrer"
             class="edit-link"
@@ -114,5 +117,12 @@ description: A Web Component library for creating components with accessible mar
         <p>&copy; {{ currentYear }} <a href="https://github.com/lunchbreakdev">Lunch Break Dev</a></p>
       </footer>
     </main>
+
+    {% if content | toc %}
+    <aside id="toc">
+      <h2>On This Page</h2>
+      {{ content | toc | safe }}
+    </aside>
+    {% endif %}
   </body>
 </html>
