@@ -1359,6 +1359,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lunchbreakdev/lbd-spinbutton@workspace:components/spinbutton":
+  version: 0.0.0-use.local
+  resolution: "@lunchbreakdev/lbd-spinbutton@workspace:components/spinbutton"
+  languageName: unknown
+  linkType: soft
+
 "@lunchbreakdev/lbd-tabs@workspace:components/tabs":
   version: 0.0.0-use.local
   resolution: "@lunchbreakdev/lbd-tabs@workspace:components/tabs"
